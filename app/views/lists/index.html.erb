@@ -1,0 +1,16 @@
+<div>
+  <div class='banner' style='background-image: url(https://source.unsplash.com/evlkOfkQ5rE);'>
+    <h1>All the Movie Lists!</h1>
+  </div>
+  <div class='list'>
+  <% @lists.each do |list| %>
+      <div class="card-product">
+        <img src="https://source.unsplash.com/MBIge9kUMs4" />
+        <div class="card-product-infos">
+          <h2><%= link_to list.name, list_path(list), class: 'category' %></h2>
+          <h6><%= link_to 'Delete', list, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %></h6>
+        </div>
+      </div>
+  <% end %>
+  </div>
+</div>
