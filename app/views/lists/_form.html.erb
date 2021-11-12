@@ -3,7 +3,7 @@
   <%# <img src="https://source.unsplash.com/PvAAYZx-yf8" alt="Background image" id=bg-img> %>
   <div class='container'>
     <%= simple_form_for(@list) do |f| %>
-      <%= f.input :name, label_html: { class: 'input' } %>
+      <%= f.input :name, label: "What is the list's name?", label_html: { class: 'input' } %>
       <%= f.submit '+ Create list', class: 'button submit' %>
       <% end %>
   </div>
